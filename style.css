@@ -2,12 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 28px;
+}
+
+:root {
+    /* --fs: 28px; */
+    /* --fs-h1:;
+    --fs-p:; */
+
+    --primary-color: hsl(150, 100%, 66%);
+    --p-color: hsl(193, 38%, 86%);
+
+    --background-main: hsl(218, 23%, 16%);
+    --background-card: hsl(217, 19%, 38%);
+}
+
+body {
+    min-height: 100lvh;
 }
 
 .attribution {
     font-size: 11px;
     text-align: center;
-    
+
     a {
         color: hsl(228, 45%, 44%);
     }

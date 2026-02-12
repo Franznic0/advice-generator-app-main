@@ -57,6 +57,4 @@ function getAdvice () {
 // handle button interaction
 $('#generator-button').click(getAdvice);
 
-$('#advice-text').keyup(getAdvice());
-
 // handle wait for response time

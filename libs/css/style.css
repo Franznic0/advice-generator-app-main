@@ -97,10 +97,6 @@ picture :is(source, img) {
     width: 100%;
 }
 
-#separator {
-    fill: var();
-}
-
 .attribution {
     font-size: .5rem;
     text-align: center;

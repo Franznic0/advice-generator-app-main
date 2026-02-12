@@ -9,14 +9,10 @@
     font-size: 28px;
 }
 
-:root {
-    /* --fs: 28px; */
-    /* --fs-h1:;
-    --fs-p:; */
-
+:root {    
     --primary-color: hsl(150, 100%, 66%);
     --p-color: hsl(193, 38%, 86%);
-
+    
     --background-main: hsl(218, 23%, 16%);
     --background-card: hsl(217, 19%, 24%);
     --background-separator: hsl(217, 19%, 38%);
@@ -36,10 +32,10 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1.3rem;
-
+    
     min-height: 100vh;
     background-color: var(--background-main);
-
+    
     color: var(--p-color);
 }
 
@@ -57,6 +53,8 @@ main {
 
     background-color: var(--background-card);
     padding: 1rem 1rem 1.7rem 1rem;
+    max-width: 90%;
+    margin-inline: auto;
     min-height: 10rem;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -77,16 +75,26 @@ main {
         bottom: 0;
         left: 50%;
         translate: -50% 50%;
+        display: flex;
+        justify-content: center;
         background-color: var(--primary-color);
-        align-content: center;
-        width: 2rem;
-        padding: .2rem;
-        clip-path: circle();
-
+        padding: .5rem;
+        border: transparent;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        
         img {
             scale: .8;
         }
+        
     }
+}
+
+picture :is(source, img) {
+    width: 100%;
 }
 
 #separator {
@@ -98,8 +106,9 @@ main {
     text-align: center;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
     #generator-button:hover {
         cursor: pointer;
+        box-shadow: 0 0 15px 5px var(--primary-color);
     }
 }

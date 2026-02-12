@@ -14,9 +14,9 @@
     --primary-color: hsl(150, 100%, 66%);
     --p-color: hsl(193, 38%, 86%);
     
-    --background-main: hsl(218, 23%, 16%);
     --background-card: hsl(217, 19%, 24%);
-    --background-separator: hsl(217, 19%, 38%);
+    --background-border: hsl(217, 19%, 38%);
+    --background-main: hsl(218, 23%, 16%);
 }
 
 a,
@@ -51,18 +51,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     background-color: var(--background-card);
+    border: 1px solid var(--background-border);
     padding: 1rem 1rem 1.7rem 1rem;
     max-width: 90%;
     margin: 2rem auto;
     min-height: 10rem;
     border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-
     h1 {
         letter-spacing: .1rem;
         text-transform: uppercase;
@@ -89,6 +84,7 @@ main {
         
         img {
             scale: .8;
+            max-height: 1rem;
         }
         
     }
@@ -108,9 +104,89 @@ picture :is(source, img) {
     padding: .5rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
     #generator-button:hover {
         cursor: pointer;
         box-shadow: 0 0 15px 5px var(--primary-color);
     }
+}
+
+.roll {
+    animation: rollTheDice .6s infinite linear;
+    -webkit-animation: rollTheDice .6s infinite linear;
+}
+
+.bounce {
+    animation: bounce .6s infinite linear;
+    -webkit-animation: bounce .6s infinite linear;
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+}
+    23% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+}
+    37% {
+        transform: translateY(6px);
+        -webkit-transform: translateY(6px);
+        -moz-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        -o-transform: translateY(6px);
+}
+    39% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+}
+    60% {
+        transform: translateY(-8px);
+        -webkit-transform: translateY(-8px);
+        -moz-transform: translateY(-8px);
+        -ms-transform: translateY(-8px);
+        -o-transform: translateY(-8px);
+}
+    65% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+    84% {
+        transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+        -moz-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        -o-transform: translateY(5px);
+}
+    89% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+}
+
+@keyframes rollTheDice {
+    
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+}
 }

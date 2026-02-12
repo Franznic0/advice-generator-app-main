@@ -29,6 +29,10 @@ function getAdvice () {
 
                 // display advice
                 $('#advice-text').append(adviceElement);
+
+                // stop dice animation
+                $('#generator-button').removeClass('roll');
+                $('#dice').removeClass('bounce');
             } else {
                 // set error message
                 let errorTitleText = 'Error';
@@ -43,18 +47,31 @@ function getAdvice () {
                 // display error message
                 $('#advice-number').append(errorTitleDisplay);
                 $('#advice-text').append(errorDisplay);
+                
+                // stop dice animation
+                $('#generator-button').removeClass('roll');
+                $('#dice').removeClass('bounce');
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {
             $('#advice-number').text('Error');
             $('#advice-number').css('color', 'red');
                         
-            $('#advice-text').text('Error retrieving data');            
+            $('#advice-text').text('Error retrieving data');  
+            
+            // stop dice animation
+                $('#generator-button').removeClass('roll');
+                $('#dice').removeClass('bounce');      
         }
     })
 }
 
 // handle button interaction
-$('#generator-button').click(getAdvice);
+$('#generator-button').click(function() {
+    
+    // handle wait for response time
+    $('#generator-button').addClass('roll');
+    $('#dice').addClass('bounce');
 
-// handle wait for response time
+    getAdvice();
+});

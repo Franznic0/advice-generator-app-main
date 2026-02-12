@@ -1,7 +1,7 @@
 // get API data
 function getAdvice () {
     $.ajax({
-        url: '../php/getAdvice.php',
+        url: '../../libs/php/getAdvice.php',
         type: 'GET',
         dataType: 'json',
         success: function(result) {

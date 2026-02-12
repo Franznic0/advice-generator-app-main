@@ -57,5 +57,5 @@ I want to continue work on API calls, using different frameworks and methods in 
 
 ## Author
 
-- Website - [Add your name here](https://francesconicolosi.co.uk/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Franznic0)
+- Website - [Francesco Nicolosi](https://francesconicolosi.co.uk/)
+- Frontend Mentor - [@Franznic0](https://www.frontendmentor.io/profile/Franznic0)

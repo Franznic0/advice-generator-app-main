@@ -35,8 +35,8 @@ body {
     grid-template-rows: 1fr 1.3rem;
     
     min-height: 100vh;
+    padding-inline: .5rem;
     background-color: var(--background-main);
-    
     color: var(--p-color);
 }
 
@@ -54,15 +54,20 @@ main {
     background-color: var(--background-card);
     border: 1px solid var(--background-border);
     padding: 1rem 1rem 1.7rem 1rem;
-    max-width: 90%;
-    margin: 2rem auto;
+    width: 100%;
+    margin: 1rem 0 2rem;
     min-height: 10rem;
     border-radius: 10px;
+
     h1 {
         letter-spacing: .1rem;
         text-transform: uppercase;
 
         font-size: .4rem;
+    }
+
+    p {
+        margin-block: .5rem;
     }
 
     #generator-button {
@@ -89,8 +94,8 @@ main {
         
     }
 
-    @media screen and (min-width:600px) {
-        max-width: 20rem;        
+    @media screen and (min-width:425px) {
+        width: 20rem;        
     }
 }
 
@@ -112,13 +117,13 @@ picture :is(source, img) {
 }
 
 .roll {
-    animation: rollTheDice .6s infinite linear;
-    -webkit-animation: rollTheDice .6s infinite linear;
+    animation: rollTheDice .5s ease-out;
+    -webkit-animation: rollTheDice .5s ease-out;
 }
 
 .bounce {
-    animation: bounce .6s infinite linear;
-    -webkit-animation: bounce .6s infinite linear;
+    animation: bounce 1s ease-out;
+    -webkit-animation: bounce 1s ease-out;
 }
 
 @keyframes bounce {

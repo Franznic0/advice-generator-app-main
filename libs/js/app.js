@@ -72,5 +72,4 @@ $("#generator-button").click(function () {
 
   // call API
   setTimeout(getAdvice, 1000);
-//   getAdvice();
 });

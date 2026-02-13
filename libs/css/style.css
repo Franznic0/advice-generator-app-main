@@ -116,6 +116,18 @@ picture :is(source, img) {
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        -webkit-animation: none;
+        transition: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+}
+}
+
 .roll {
     animation: rollTheDice .5s ease-out;
     -webkit-animation: rollTheDice .5s ease-out;

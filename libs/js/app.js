@@ -11,7 +11,7 @@ async function getAdvice() {
     const response = await fetch(url);
     if (!response.ok) {
       // set error message
-      let errorTitleText = "Error";
+      const errorTitleText = "Error";
       let errorTitleDisplay = document.createElement("strong");
       errorTitleDisplay.innerText = errorTitleText;
       errorTitleDisplay.style.color = "red";

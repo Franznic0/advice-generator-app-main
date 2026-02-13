@@ -42,12 +42,11 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- PHP call to API
 - Vanilla Javascript/ jQuery
 
 ### What I learned
 
-I used this challenge to practice PHP syntax and call to APIs.
+I revisited topics I already knew, reinforcing my understanding and making the implementation smoother.
 
 ### Continued development
 

@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/Franznic0/advice-generator-app-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: ([https://your-live-site-url.com](https://franznic0.github.io/advice-generator-app-main/))
 
 ## My process
 
@@ -42,12 +42,11 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- PHP call to API
 - Vanilla Javascript/ jQuery
 
 ### What I learned
 
-I used this challenge to practice PHP syntax and call to APIs.
+I revisited topics I already knew, reinforcing my understanding and making the implementation smoother.
 
 ### Continued development
 

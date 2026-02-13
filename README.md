@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/Franznic0/advice-generator-app-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: ([https://your-live-site-url.com](https://franznic0.github.io/advice-generator-app-main/))
 
 ## My process
 

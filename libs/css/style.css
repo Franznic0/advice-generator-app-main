@@ -35,7 +35,6 @@ body {
     grid-template-rows: 1fr 1.3rem;
     
     min-height: 100vh;
-    padding-inline: .5rem;
     background-color: var(--background-main);
     color: var(--p-color);
 }
@@ -53,8 +52,9 @@ main {
     justify-content: space-between;
     background-color: var(--background-card);
     border: 1px solid var(--background-border);
-    padding: 1rem 1rem 1.7rem 1rem;
-    margin: 1rem 0 2rem;
+    width: 90vw;
+    padding: 1rem 2rem 1.7rem 2rem;
+    margin: 1rem auto 2rem;
     min-height: 10rem;
     border-radius: 10px;
 
@@ -63,10 +63,11 @@ main {
         text-transform: uppercase;
 
         font-size: .4rem;
+        margin-block: .5rem;
     }
 
     p {
-        margin-block: .5rem;
+        margin-block: .5rem 1rem;
     }
 
     #generator-button {
@@ -100,6 +101,7 @@ main {
 
 picture :is(source, img) {
     width: 100%;
+    align-self: center;
 }
 
 .attribution {

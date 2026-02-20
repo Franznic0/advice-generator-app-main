@@ -2,29 +2,29 @@
 async function getAdvice() {
   const url = "https://api.adviceslip.com/advice";
 
-  // empty advice
-  $("#advice-text").html("");
-  // empty ad number
-  $("#advice-number").html("");
+  // // empty advice
+  // $("#advice-text").html("");
+  // // empty ad number
+  // $("#advice-number").html("");
 
   try {
     const response = await fetch(url);
     if (!response.ok) {
       // set error message
       const errorTitleText = "Error";
-      let errorTitleDisplay = document.createElement("strong");
+      const errorTitleDisplay = document.createElement("strong");
       errorTitleDisplay.innerText = errorTitleText;
       errorTitleDisplay.style.color = "red";
 
-      let errorText = "Error fetching a good advice";
-      let errorDisplay = document.createElement("strong");
+      const errorText = "Error fetching a good advice";
+      const errorDisplay = document.createElement("strong");
       errorDisplay.innerText = errorText;
 
       // display error message
       $("#advice-number").append(errorTitleDisplay);
       $("#advice-text").append(errorDisplay);
 
-      // stop dice animation
+      // remove dice animation classes
       $("#generator-button").removeClass("roll");
       $("#dice").removeClass("bounce");
 
@@ -32,14 +32,19 @@ async function getAdvice() {
     }
     const result = await response.json();
 
+    // empty ad number
+    $("#advice-number").html("");
+    // empty advice
+    $("#advice-text").html("");
+
     // assign ad number
-    let adviceNumData = result.slip.id;
-    let adviceNumElement = document.createElement("strong");
+    const adviceNumData = result.slip.id;
+    const adviceNumElement = document.createElement("strong");
     adviceNumElement.textContent = "advice #" + adviceNumData;
 
     // assign advice
-    let adviceData = result.slip.advice;
-    let adviceElement = document.createElement("strong");
+    const adviceData = result.slip.advice;
+    const adviceElement = document.createElement("strong");
     adviceElement.textContent = '"' + adviceData + '"';
 
     // display ad number
@@ -48,17 +53,16 @@ async function getAdvice() {
     // display advice
     $("#advice-text").append(adviceElement);
 
-    // stop dice animation
+    // remove dice animation classes
     $("#generator-button").removeClass("roll");
     $("#dice").removeClass("bounce");
-
   } catch (error) {
     $("#advice-number").text("Error");
     $("#advice-number").css("color", "red");
 
     $("#advice-text").text("Error retrieving data.\n" + error.message);
 
-    // stop dice animation
+    // remove dice animation classes
     $("#generator-button").removeClass("roll");
     $("#dice").removeClass("bounce");
   }
@@ -69,6 +73,26 @@ $("#generator-button").click(function () {
   // handle wait for response time
   $("#generator-button").addClass("roll");
   $("#dice").addClass("bounce");
+
+  // empty number
+  $("#advice-number").html("");
+  // empty advice
+  $("#advice-text").html("");
+
+  // assign ad number
+  const loadingNum = "...";
+  const loadingNumElement = document.createElement("strong");
+  loadingNumElement.textContent = "advice #" + loadingNum;
+
+  // create loading message element
+  const loadingMessage = "Rolling the dice...";
+  const loadingElement = document.createElement("strong");
+  loadingElement.textContent = loadingMessage;
+
+  // display loading number
+  $("#advice-number").append(loadingNumElement);
+  // display loading message
+  $("#advice-text").append(loadingElement);
 
   // call API
   setTimeout(getAdvice, 1000);
